@@ -33,8 +33,6 @@
 				document.getElementById ("login").disabled = true;
 				document.getElementById ("access").innerHTML = "Access locked.";
 		}
-
-		( () => {
 			
 		const password = "8127";
 		var passwordGuess = document.getElementById ("password");
@@ -45,8 +43,6 @@
 		var attempts = 2;
 		var maxAttempts = 5;
 		var attemptsText = document.getElementById ("attempts");
-			
-		} )();
 		
 		if (localStorage.getItem("loadedAttempts")) {
 			attemptsText.innerHTML = localStorage.getItem("loadedAttempts");
