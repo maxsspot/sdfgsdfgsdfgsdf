@@ -47,7 +47,7 @@
 
 		if (localStorage.getItem("loadedAttempts")) {
 			attemptsText.innerHTML = localStorage.getItem("loadedAttempts");
-			attempts = parseInt(attemptsText.innerHTML++);
+			attempts = parseInt(attemptsText.innerHTML);
 		}
 			
 		function guess () {
