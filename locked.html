@@ -25,12 +25,12 @@
 		const password = "8127";
 		var passwordGuess = document.getElementById ("password");
 		var signIn = document.getElementById ("signIn");
-		var in = document.getElementById ("in");
+		var inS = document.getElementById ("in");
 		
 		function guess () {
 			if (password == passwordGuess.value) {
 				signIn.style.display = "none';
-				in.style.display = "block";
+				inS.style.display = "block";
 			} else {
 				passwordGuess.style.borderBottom = "red solid 1px";
 				setTimeout(function(){
@@ -53,6 +53,10 @@ body {
     text-align:center;
     font-weight:bold;
 }
+
+#in {
+	display:none;
+	    }
 
 nav {
     background-color:#36454f;
