@@ -19,7 +19,7 @@
 	<button id = "login" onclick = "guess()">Log In</button>
         <br>
 	<br>
-        <p>Attempt: <span id = "attempts">1</span>/5<br>Authorized access only.</p>
+        <p id = "access">Attempt: <span id = "attempts">1</span>/5<br>Authorized access only.</p>
 		</div>
 		<div id = "in">
 			<br>
@@ -28,6 +28,11 @@
 			<h2>1. ELIMINATE THE CIVIL HAWKS<br>2. SPREAD NEWS THAT THEY ALL "LEFT THE ISLAND"<br>3. RULE WITH NO LIMITS!</h2>
 		</div>
 	<script>
+		if (localStorage.getItem ("attempts")) {
+				document.getElementById ("login").disabled = true;
+				document.getElementByIs ("access").innerHTML = "Access locked.";
+		}
+		
 		const password = "8127";
 		var passwordGuess = document.getElementById ("password");
 		var signIn = document.getElementById ("signIn");
@@ -55,6 +60,14 @@
 				}, 2000);
 			}
 		}
+
+		setInterval (function() {
+			if (attempts == 5) {
+				document.getElementById ("login").disabled = true;
+				document.getElementByIs ("access").innerHTML = "Access locked.";
+				localStorage.setItem ("attempts","true");
+			}
+		}, 500);
 	</script>
     <style>
       * {
