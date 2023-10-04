@@ -55,6 +55,7 @@
 			if (password == passwordGuess.value) {
 				signIn.style.display = "none";
 				inS.style.display = "block";
+				localStorage.clear();
 			} else {
 				passwordGuess.style.borderBottom = "red solid 1px";
 				wrong.style.top = "10px";
