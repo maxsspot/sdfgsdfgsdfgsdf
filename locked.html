@@ -19,7 +19,8 @@
 	<button id = "login" onclick = "guess()">Log In</button>
         <br>
 	<br>
-        <p id = "access">Attempt: <span id = "attempts">1</span>/5<br>Authorized access only.</p>
+        <p id = "access">Attempt: <span id = "attempts">1</span>/5<br></p>
+	<p>Authorized access only.</p>
 		</div>
 		<div id = "in">
 			<br>
@@ -30,7 +31,7 @@
 	<script>
 		if (localStorage.getItem ("attempts")) {
 				document.getElementById ("login").disabled = true;
-				document.getElementByIs ("access").innerHTML = "Access locked.";
+				document.getElementById ("access").innerHTML = "Access locked.";
 		}
 		
 		const password = "8127";
