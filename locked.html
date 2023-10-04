@@ -7,15 +7,38 @@
 		<title>Confidential</title>
 	</head>
 	<body>
+		<div id = "signIn">
 	<br>
         <h2 id = "title">ENTER PASSWORD</h2>
         <br>
-        <input placeholder = "Password..." type = "password" />
+        <input placeholder = "Password..." type = "password" id = "password" />
 	<br>
-	<button id = "login">Log In</button>
+	<button id = "login" onclick = "guess()">Log In</button>
         <br>
 	<br>
         <p>Authorized access only.</p>
+		</div>
+		<div id = "in">
+			<h1>DOCUMENTS</h1>
+		</div>
+	<script>
+		const password = "8127";
+		var passwordGuess = document.getElementById ("password");
+		var signIn = document.getElementById ("signIn");
+		var in = document.getElementById ("in");
+		
+		function guess () {
+			if (password == passwordGuess.value) {
+				signIn.style.display = "none';
+				in.style.display = "block";
+			} else {
+				passwordGuess.style.borderBottom = "red solid 1px";
+				setTimeout(function(){
+					passwordGuess.style.borderBottom = "white solid 1px";
+				}, 2000);
+			}
+		}
+	</script>
     <style>
       * {
     font-family:"Open Sans", sans-serif;
