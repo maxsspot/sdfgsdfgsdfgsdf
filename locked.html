@@ -8,7 +8,7 @@
 	</head>
 	<body>
 	<div id = "wrong">
-		<h2>WRONG PASSWORD!<br>5 attempts left!</h2>
+		<h2>WRONG PASSWORD!</h2>
 	</div>
 	<div id = "signIn">
 	<br>
@@ -19,7 +19,7 @@
 	<button id = "login" onclick = "guess()">Log In</button>
         <br>
 	<br>
-        <p>Authorized access only.</p>
+        <p>Attempt: <span id = "attempts">1</span>/5<br>Authorized access only.</p>
 		</div>
 		<div id = "in">
 			<br>
@@ -33,6 +33,10 @@
 		var signIn = document.getElementById ("signIn");
 		var inS = document.getElementById ("in");
 		var wrong = document.getElementById ("wrong");
+
+		var attempts = 1;
+		var maxAttempts = 5;
+		var attemptsText = document.getElementById ("attempts");
 		
 		function guess () {
 			if (password == passwordGuess.value) {
@@ -48,6 +52,8 @@
 					wrong.style.top = "-60px";
 					wrong.style.opacity = "0.0";
 				}, 2000);
+
+				attemptsText.innerHTML = attempts++;
 			}
 		}
 	</script>
