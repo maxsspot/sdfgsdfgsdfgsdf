@@ -29,6 +29,7 @@
 			<p>Eliminate The Civil Hawks, spread the news that the rebels "left the island", and rule happily knowing that no one can stop us!</h2>
 		</div>
 	<script>
+		{
 		if (localStorage.getItem ("attempts")) {
 				document.getElementById ("login").disabled = true;
 				document.getElementById ("access").innerHTML = "Access locked.";
@@ -69,6 +70,7 @@
 				localStorage.setItem ("attempts","true");
 			}
 		}, 1);
+		}
 	</script>
     <style>
       * {
