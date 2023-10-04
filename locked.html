@@ -46,14 +46,13 @@
 				passwordGuess.style.borderBottom = "red solid 1px";
 				wrong.style.top = "10px";
 				wrong.style.opacity = "1.0";
+				attemptsText.innerHTML = attempts++;
 				
 				setTimeout(function(){
 					passwordGuess.style.borderBottom = "white solid 1px";
 					wrong.style.top = "-60px";
 					wrong.style.opacity = "0.0";
 				}, 2000);
-
-				attemptsText.innerHTML = attempts++;
 			}
 		}
 	</script>
