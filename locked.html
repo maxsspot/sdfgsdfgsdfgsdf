@@ -32,6 +32,7 @@
 		var passwordGuess = document.getElementById ("password");
 		var signIn = document.getElementById ("signIn");
 		var inS = document.getElementById ("in");
+		var wrong = document.getElementById ("wrong");
 		
 		function guess () {
 			if (password == passwordGuess.value) {
@@ -39,8 +40,13 @@
 				inS.style.display = "block";
 			} else {
 				passwordGuess.style.borderBottom = "red solid 1px";
+				wrong.style.top = "10px";
+				wrong.style.opacity = "1.0";
+				
 				setTimeout(function(){
 					passwordGuess.style.borderBottom = "white solid 1px";
+					wrong.style.top = "-60px";
+					wrong.style.opacity = "0.0";
 				}, 2000);
 			}
 		}
@@ -131,6 +137,9 @@ button {
 	position:fixed;
 	left: 50%;
     	transform: translate(-50%, 0);
+	transition:all 0.25s;
+	opacity:0;
+	top:-60px;
 }
     </style>
     </body>
