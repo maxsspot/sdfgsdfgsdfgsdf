@@ -57,7 +57,7 @@
 				wrong.style.top = "10px";
 				wrong.style.opacity = "1.0";
 				attemptsText.innerHTML = attempts++;
-				localStorage.setItem ("attemptsNumber",attempts);
+				localStorage.setItem ("attemptsNumber",attemptsText.innerHTML);
 				
 				setTimeout(function(){
 					passwordGuess.style.borderBottom = "white solid 1px";
