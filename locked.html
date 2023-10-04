@@ -43,6 +43,10 @@
 		var attempts = 2;
 		var maxAttempts = 5;
 		var attemptsText = document.getElementById ("attempts");
+
+		if (localStorage.getItem ("attemptsNumber")) {
+			attemptsText.innerHTML = localStorage.getItem ("attemptsNumber");
+		}
 		
 		function guess () {
 			if (password == passwordGuess.value) {
@@ -53,6 +57,7 @@
 				wrong.style.top = "10px";
 				wrong.style.opacity = "1.0";
 				attemptsText.innerHTML = attempts++;
+				localStorage.setItem ("attemptsNumber",attempts);
 				
 				setTimeout(function(){
 					passwordGuess.style.borderBottom = "white solid 1px";
