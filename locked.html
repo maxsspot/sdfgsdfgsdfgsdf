@@ -62,12 +62,12 @@
 		}
 
 		setInterval (function() {
-			if (attempts == 5) {
+			if (attempts == 6) {
 				document.getElementById ("login").disabled = true;
 				document.getElementByIs ("access").innerHTML = "Access locked.";
 				localStorage.setItem ("attempts","true");
 			}
-		}, 500);
+		}, 1);
 	</script>
     <style>
       * {
