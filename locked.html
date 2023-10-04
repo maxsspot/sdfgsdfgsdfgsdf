@@ -19,7 +19,7 @@
 	<button id = "login" onclick = "guess()">Log In</button>
         <br>
 	<br>
-        <p>Attempt: <span id = "attempts">1</span>/5<br>Authorized access only.</p>
+        <p>Attempt: <span id = "attempts"></span>/5<br>Authorized access only.</p>
 		</div>
 		<div id = "in">
 			<br>
@@ -34,7 +34,7 @@
 		var inS = document.getElementById ("in");
 		var wrong = document.getElementById ("wrong");
 
-		var attempts = 1;
+		var attempts = 0;
 		var maxAttempts = 5;
 		var attemptsText = document.getElementById ("attempts");
 		
