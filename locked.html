@@ -11,6 +11,7 @@
         <h2 id = "title">ENTER PASSWORD</h2>
         <br>
         <input placeholder = "Password..." type = "password" />
+	<button id = "login">Log In</button>
         <br>
 	<br>
         <p>Authorized access only.</p>
@@ -61,7 +62,25 @@ h3 {
         border:transparent;
         border-bottom:white solid 1px;
 	outline:none;
+	color:white;
       }
+
+#login {
+	width:75px;
+	height:40px;
+	background-color:transparent;
+	border:white solid 1px;
+	transition:all 0.25s;
+}
+
+#login:hover {
+	color:black;
+	background-color:white;
+}
+
+button {
+	cursor:pointer;
+}
     </style>
     </body>
 </html>
