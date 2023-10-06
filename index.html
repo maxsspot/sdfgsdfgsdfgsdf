@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 		<title>Utopia Island of Smogtropolis</title>
 	</head>
 	<body>
+		<div id = "extra">
+			<p>We hope you enjoy the Utopia Island of Smogtropolis! <a onclick = "closeinfo()">CLOSE</a></p>
+		</div>
 		<nav>
 			<img oncontextmenu = "return false" src = "https://previews.dropbox.com/p/thumb/ACB_b_XmxgWqDnLtP7ScmSBFOvcvXRiLu981AJ28-O35JUydLqaQKzjY2n1DbBJqXTN2b9C9fBQiaETW1SJkbtI0b43NPc_KD0f-JPOWsgsn2IDACXSayXGHfzCUfgN9Kq5EJrf5clrA0ufW2NFDXrwg-tfR2gchJ5d51er9_Zqryo6tHfW2gi35WXSNvQR12S97JWw8A0E_wRqLCqdGD5TAIK0oSCk-EJwlVH_ggMVRl02SzYC_yI_RcJKSV7K81nWmkzRpnEVtoY1FJCDVbs4hNVfCXxaXqDlQ9tt_vMQYt2A-uh2V3IfpeP7rB6gMYOeUvXinStZrYyErS9fhzxCr/p.png" />
             <h1 id = "title">SMOGTROPOLIS</h1>
+		<button id = "navigation" onclick = "infopen()"><i class="fa-solid fa-circle-info fa-lg"></i></button>
         </nav>
         <br>
         <br>
@@ -60,6 +65,24 @@ body {
     font-weight:bold;
 }
 
+#navigation {
+	width:75px;
+	height:75px;
+	background-color:transparent;
+	border:transparent;
+	float:right;
+	transition:all 0.25s;
+	position:fixed;
+}
+
+#navigation:hover {
+	background-color:lightgray;
+}
+
+#navigation:active {
+	background-color:gainsboro;
+}
+
 a {
     text-decoration:none;
 }
@@ -68,11 +91,18 @@ a:hover {
 	text-decoration:underline;
 }
 	    
-nav {
+nav, #extra {
     background-color:#36454f;
     width:100%;
     height:75px;
     position:fixed;
+}
+
+#extra {
+    opacity:0;
+    margin-top:70px;
+    pointer-events:none;
+    transition:all 0.25s;
 }
 
 img {
@@ -81,6 +111,7 @@ img {
     position:fixed;
     left:0px;
     float:left;
+    pointer-events:none;
 }
 
 #title {
@@ -109,5 +140,18 @@ h3 {
     margin:auto;
 }
     </style>
+	<script>
+		function infopen () {
+			document.getElementById ("extra").style.opacity = "1.0";
+			document.getElementById ("extra").style.marginTop = "75px";
+			document.getElementById ("extra").style.pointerEvents = "1.0";
+		}
+
+		function closeinfo () {
+			document.getElementById ("extra").style.opacity = "0.0";
+			document.getElementById ("extra").style.marginTop = "70px";
+			document.getElementById ("extra").style.pointerEvents = "0.0";
+		}
+	</script>
     </body>
 </html>
